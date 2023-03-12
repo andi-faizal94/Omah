@@ -62,8 +62,8 @@ function App() {
         </nav>
       </header>
       <main>
-        <section className='lg:max-w-7xl'>
-          <div className='flex flex-wrap justify-center items-center text-center lg:text-left lg:justify-between lg:items-center lg:max-w-7xl lg:mx-[135px] lg:mb-14 lg:mt-16'>
+        <section className='lg:max-w-7x'>
+          <div className='flex flex-wrap gap-y-8 lg:gap-y-0 justify-center items-center text-center lg:text-left lg:justify-between lg:items-center lg:max-w-7xl lg:mx-[135px] lg:mb-14 lg:mt-20'>
             <div className='w-full lg:w-7/12'>
               <h1 className='text-2xl lg:text-5xl lg:mb-4 font-poppins'>
                 Ready to
@@ -85,18 +85,18 @@ function App() {
             </div>
           </div>
 
-          <div className='lg:relative w-full mt-10 mx-2 lg:mx-0'>
-            <div className='w-full lg:w-auto lg:left-0 lg:mr-[100px] '>
+          <div className='lg:relative lg:w-auto mt-12 mx-auto px-2 lg:px-0 lg:mx-0'>
+            <div className='lg:absolute lg:w-auto lg:left-0 lg:mr-[100px] '>
               <img src={house} alt='house' />
             </div>
           </div>
         </section>
-        <section className='lg:max-w-7xl lg:mx-[135px] mb-10  lg:mb-[128px]'>
+        <section className='lg:max-w-7xl lg:mt-[600px] lg:mx-[135px] mb-10  lg:mb-[128px]'>
           <div className='flex justify-between items-center mx-5 lg:mx-0 mb-12'>
-            <div className='flex items-center lg:gap-x-8'>
-              <h2 className='text-black text-4xl'>The Latest</h2>
-              <h4 className='text-yellow text-2xl'>For Sale</h4>
-              <h4 className='text-gray text-2xl'>To Rent</h4>
+            <div className='flex items-center gap-x-2 lg:gap-x-8'>
+              <h2 className='text-black text-2xl lg:text-4xl'>The Latest</h2>
+              <h4 className='text-yellow text-lg lg:text-2xl'>For Sale</h4>
+              <h4 className='text-gray text-2xl lg:text-2xl'>To Rent</h4>
             </div>
             <div>
               <a href='/#veiwall' className='text underline text-black'>
@@ -104,10 +104,14 @@ function App() {
               </a>
             </div>
           </div>
-          <div className='flex flex-wrap lg:flex-nowrap mx-5 lg:mx-0 lg:gap-x-5 lg:mt-10'>
+          <div className='flex flex-wrap md:flex-nowrap lg:flex-nowrap mx-5 gap-y-12 mb-10 md:gap-x-2 lg:mb-0 lg:gap-y-0 lg:mx-0 lg:gap-x-5 lg:mt-10'>
             <div className='w-full lg:w-4/12'>
               <div>
-                <img src={OrangeHouse} alt='' />
+                <img
+                  src={OrangeHouse}
+                  alt='orange house'
+                  className='object-cover'
+                />
                 <h3 className='text-3xl  text-black'>Orange House</h3>
                 <p className='text-base text-gray'>
                   Jl Klapanunggal, cileungsi, bogor
@@ -117,7 +121,11 @@ function App() {
             </div>
             <div className='w-full lg:w-4/12'>
               <div>
-                <img src={WhiteHouse} alt='' />
+                <img
+                  src={WhiteHouse}
+                  alt='white house'
+                  className='object-cover'
+                />
                 <h3 className='text-3xl  text-black'>White House</h3>
                 <p className='text-base text-gray'>
                   Jl Klapanunggal, cileungsi, bogor
@@ -127,7 +135,11 @@ function App() {
             </div>
             <div className='w-full lg:w-4/12'>
               <div>
-                <img src={GreenHouse} alt='' />
+                <img
+                  src={GreenHouse}
+                  alt='green house'
+                  className='object-cover'
+                />
                 <h3 className='text-3xl text-black'>Green House</h3>
                 <p className='text-base text-gray'>
                   Jl Klapanunggal, cileungsi, bogor
@@ -137,7 +149,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className='lg:max-w-7xl lg:mx-[135px] lg:mb-[128px]'>
+        <section className='lg:max-w-7xl mb-10 lg:mx-[135px] lg:mb-[128px]'>
           <div className='flex justify-between items-center mx-5 lg:mx-0 mb-12'>
             <div className='w-6/12'>
               <h2 className='text-lg lg:text-4xl'>
@@ -193,8 +205,8 @@ function App() {
               </a>
             </div>
           </div>
-          <div className='flex flex-wrap mx-5 lg:mx-0'>
-            <div className='w-full lg:w-6/12'>
+          <div className='flex flex-wrap gap-y-10 lg:gap-y-0 mx-5 lg:mx-0'>
+            <div className='w-full md:w-6/12 lg:w-6/12'>
               <div className='mb-2'>
                 <img src={DreamHouse} alt='' />
               </div>
@@ -206,7 +218,7 @@ function App() {
                 price
               </p>
             </div>
-            <div className='w-full lg:w-6/12 lg:px-5'>
+            <div className='w-full md:w-6/12 lg:w-6/12 lg:px-5'>
               <div className='flex mb-6'>
                 <div className='w-6/12 p-2'>
                   <h4 className='text-2xl mb-4'>
@@ -255,14 +267,14 @@ function App() {
           </div>
         </section>
         <footer className='lg:max-w-7xl lg:mx-[135px] mt-[100px] lg:mt-[700px] mb-56 lg:mb-10'>
-          <div className='flex flex-wrap'>
-            <div className=' w-full lg:w-6/12 mb-5 lg:mb-0'>
+          <div className='flex items-center flex-wrap'>
+            <div className='w-full lg:w-6/12 mb-5 lg:mb-0'>
               <div className='flex justify-center lg:justify-start'>
                 <p className='text-2xl'> Omah by @dzakimuzh</p>
               </div>
             </div>
             <div className='w-full lg:w-6/12'>
-              <div className='flex  justify-center lg:gap-x-3 lg:justify-end'>
+              <div className='flex justify-center lg:gap-x-3 lg:justify-end'>
                 <div>
                   <img src={Instagram} alt='' />
                 </div>
