@@ -19,10 +19,10 @@ function App() {
       <header>
         <nav className='flex max-w-7xl m-4 lg:my-[48px] lg:mx-[135px] justify-between items-center'>
           <div>
-            <h1 className='text-2xl font-poppins'>
+            <a href='/#home' className='text-2xl font-poppins'>
               Omah{' '}
               <span className='inline-block rounded-full w-2 h-2 bg-yellow'></span>
-            </h1>
+            </a>
           </div>
           <button
             className={`flex justify-between items-center lg:hidden appearance-none z-50 
