@@ -284,10 +284,15 @@ function App() {
               <div className='flex flex-col justify-center items-center h-full '>
                 <h6 className='text-2xl lg:text-5xl text-white text-center mb-4'>
                   {' '}
-                  Subscribe to get a discount <br /> of 30%
+                  Subscribe to get a discount
                 </h6>
-                <div className='bg-white lg:w-[700px] lg:h-[104px] '>
-                  <div className='flex justify-center items-center w-full h-full  p-4 '>
+                <h6 className='text-2xl lg:text-5xl text-white text-center mb-4'>
+                  {' '}
+                  of 30%
+                </h6>
+
+                <div className='bg-white w-auto lg:w-[700px] lg:h-[104px] mx-4 md:mx-0 lg:mx-0'>
+                  <div className='flex justify-center items-center w-full h-full p-4 '>
                     <input
                       type='text'
                       className='w-full h-10 outline outline-zinc-50 px-1'
