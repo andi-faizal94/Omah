@@ -29,7 +29,7 @@ function App() {
             ${nav ? 'text-white' : 'text-inherit'}`}
             onClick={() => setNav(!nav)}
           >
-            <span className='material-symbols-outlined'>
+            <span className='material-symbols-outlined transition duration-500 ease-out'>
               {!nav ? 'menu' : 'close'}
             </span>
           </button>
@@ -38,23 +38,31 @@ function App() {
             lg:flex w-auto lg:opacity-100 lg:visible lg:h-auto z-20
             ${
               nav
-                ? 'flex items-center justify-center h-screen w-full inset-0 opacity-100 visible fixed bg-black'
-                : 'hidden opacity-0 h-0 invisible'
+                ? 'flex items-center justify-center h-screen w-full inset-0 opacity-100 visible fixed bg-black scroll-smooth  duration-75'
+                : 'hidden opacity-0 h-0 invisible scroll-smooth duration-75'
             }
           `}
           >
             <ul className='flex flex-col lg:flex-row  items-center gap-x-14 font-poppins text-white gap-y-4 lg:gap-y-0 lg:text-[#828282]'>
               <li>
-                <a href='/#home'>Home</a>
+                <a href='/#home' onClick={() => setNav(false)}>
+                  Home
+                </a>
               </li>
               <li>
-                <a href='/#torent'>To Rent</a>
+                <a href='/#torent' onClick={() => setNav(false)}>
+                  To Rent
+                </a>
               </li>
               <li>
-                <a href='/#forsale'>For Sale</a>
+                <a href='/#forsale' onClick={() => setNav(false)}>
+                  For Sale
+                </a>
               </li>
               <li>
-                <a href='/#blog'>Blog</a>
+                <a href='/#blog' onClick={() => setNav(false)}>
+                  Blog
+                </a>
               </li>
               <button className='px-6 py-2 bg-yellow text-white'>Login</button>
             </ul>
@@ -62,7 +70,7 @@ function App() {
         </nav>
       </header>
       <main>
-        <section className='lg:max-w-7x'>
+        <section className='lg:max-w-7x' id='home'>
           <div className='flex flex-wrap gap-y-8 lg:gap-y-0 justify-center items-center text-center lg:text-left lg:justify-between lg:items-center lg:max-w-7xl lg:mx-[135px] lg:mb-14 lg:mt-20'>
             <div className='w-full lg:w-7/12'>
               <h1 className='text-2xl lg:text-5xl lg:mb-4 font-poppins'>
@@ -91,7 +99,10 @@ function App() {
             </div>
           </div>
         </section>
-        <section className='lg:max-w-7xl lg:mt-[600px] lg:mx-[135px] mb-10  lg:mb-[128px]'>
+        <section
+          className='lg:max-w-7xl lg:mt-[600px] lg:mx-[135px] mb-10  lg:mb-[128px]'
+          id='torent'
+        >
           <div className='flex justify-between items-center mx-5 lg:mx-0 mb-12'>
             <div className='flex items-center gap-x-2 lg:gap-x-8'>
               <h2 className='text-black text-2xl lg:text-4xl'>The Latest</h2>
@@ -149,7 +160,10 @@ function App() {
             </div>
           </div>
         </section>
-        <section className='lg:max-w-7xl mb-10 lg:mx-[135px] lg:mb-[128px]'>
+        <section
+          className='lg:max-w-7xl mb-10 lg:mx-[135px] lg:mb-[128px]'
+          id='forsale'
+        >
           <div className='flex justify-between items-center mx-5 lg:mx-0 mb-12'>
             <div className='w-6/12'>
               <h2 className='text-lg lg:text-4xl'>
@@ -192,7 +206,10 @@ function App() {
           </div>
         </section>
 
-        <section className='lg:max-w-7xl lg:mx-[135px] lg:mb-[128px] mb-36'>
+        <section
+          className='lg:max-w-7xl lg:mx-[135px] lg:mb-[128px] mb-36'
+          id='blog'
+        >
           <div className='flex justify-between items-center mx-5 lg:mx-0 mb-12'>
             <div className='w-6/12'>
               <h2 className='text-lg lg:text-4xl'>
