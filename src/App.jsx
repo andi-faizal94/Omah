@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import house from '../src/assets/images/housenew.png';
 import WhiteHouse from '../src/assets/images/WhiteHouse.png';
 import GreenHouse from '../src/assets/images/GreenHouse.png';
@@ -14,6 +14,25 @@ import Twitter from '../src/assets/images/Twitter.png';
 
 function App() {
   const [nav, setNav] = useState(false);
+
+  useEffect(() => {
+    function responsiveNavbar() {
+      const viewWidth = window.innerWidth;
+      const sm = 640;
+
+      if (viewWidth < sm || viewWidth > sm) {
+        setNav(false);
+      }
+    }
+
+    responsiveNavbar();
+
+    window.addEventListener('resize', responsiveNavbar);
+
+    return () => {
+      window.removeEventListener('resize', responsiveNavbar);
+    };
+  }, []);
   return (
     <div className='App'>
       <header>
