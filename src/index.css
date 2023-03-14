@@ -11,3 +11,35 @@
     font-family: 'Poppins', sans-serif;
   }
 }
+
+input[value^='Jakarta'] {
+  color: #676767;
+}
+input[value^='$1000 - $2000'] {
+  color: #676767;
+}
+input[value^='3 rooms'] {
+  color: #676767;
+}
+input[value^='2 footage'] {
+  color: #676767;
+}
+
+@media (max-width: 640px) {
+  input[value^='Jakarta'] {
+    font-size: 10px;
+    color: #676767;
+  }
+  input[value^='$1000 - $2000'] {
+    font-size: 10px;
+    color: #676767;
+  }
+  input[value^='3 rooms'] {
+    font-size: 10px;
+    color: #676767;
+  }
+  input[value^='2 footage'] {
+    font-size: 10px;
+    color: #676767;
+  }
+}
