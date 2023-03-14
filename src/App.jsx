@@ -81,7 +81,7 @@ function App() {
               </li>
               <li>
                 <a href='/#forsale' onClick={() => setNav(false)}>
-                  For Sale
+                  For Sale{' '}
                 </a>
               </li>
               <li>
@@ -140,8 +140,14 @@ function App() {
                     />
                   </div>
                   <div className='w-3/12'>
-                    <label className='text-xs lg:text-base' htmlFor='price'>
+                    <label
+                      className='flex items-center text-xs lg:text-base'
+                      htmlFor='price'
+                    >
                       Price{' '}
+                      <span className='material-symbols-outlined'>
+                        expand_more
+                      </span>
                     </label>
                     <input
                       value={form.price}
@@ -154,8 +160,14 @@ function App() {
                     />
                   </div>
                   <div className='w-3/12'>
-                    <label className='text-xs lg:text-base' htmlFor='rooms'>
+                    <label
+                      className='flex items-start text-xs lg:text-base'
+                      htmlFor='rooms'
+                    >
                       Rooms
+                      <span className='material-symbols-outlined'>
+                        expand_more
+                      </span>
                     </label>
                     <input
                       value={form.rooms}
