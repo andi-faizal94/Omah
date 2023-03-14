@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import house from '../src/assets/images/housenew.png';
+import House from '../src/assets/images/housebernard.png';
 import WhiteHouse from '../src/assets/images/WhiteHouse.png';
 import GreenHouse from '../src/assets/images/GreenHouse.png';
 import OrangeHouse from '../src/assets/images/OrangeHouse.png';
@@ -14,6 +14,12 @@ import Twitter from '../src/assets/images/Twitter.png';
 
 function App() {
   const [nav, setNav] = useState(false);
+  const [form, setForm] = useState({
+    select: 'Jakarta',
+    price: '$1000 - $2000',
+    rooms: '3 rooms',
+    footage: '2 footage',
+  });
 
   useEffect(() => {
     function responsiveNavbar() {
@@ -112,14 +118,81 @@ function App() {
             </div>
           </div>
 
-          <div className='lg:relative lg:w-auto mt-12 mx-auto px-2 lg:px-0 lg:mx-0'>
-            <div className='lg:absolute lg:w-auto lg:left-0 lg:mr-[100px] '>
-              <img src={house} alt='house' />
+          <div className='lg:relative lg:w-auto mt-12 mx-auto h-[500px] px-2 lg:px-0 lg:mx-0'>
+            <div className='lg:absolute w-full max-w-full lg:w-auto lg:max-w-[1308px] xl:max-w-[1308px] lg:left-0 lg:mr-[135px] '>
+              <img src={House} alt='house' />
+            </div>
+            <div className='lg:absolute lg:bottom-0 w-full max-w-full lg:max-w-[1308px] xl:max-w-[1308px]  lg:right-[135px]  lg:w-[894px] bg-white h-[112px] py-4 px-1 lg:py-[16px] lg:px-[40px] shadow-2xl'>
+              <div className='flex items-center'>
+                <div className='w-10/12 flex items-center'>
+                  <div className='w-3/12'>
+                    <label className='text-xs lg:text-base' htmlFor='select'>
+                      Select City
+                    </label>
+                    <input
+                      value={form.select}
+                      onChange={(e) =>
+                        setForm({ ...form, select: e.target.value })
+                      }
+                      id='select'
+                      className='w-5/6'
+                      type='text'
+                    />
+                  </div>
+                  <div className='w-3/12'>
+                    <label className='text-xs lg:text-base' htmlFor='price'>
+                      Price{' '}
+                    </label>
+                    <input
+                      value={form.price}
+                      onChange={(e) =>
+                        setForm({ ...form, price: e.target.value })
+                      }
+                      id='price'
+                      className='w-5/6'
+                      type='text'
+                    />
+                  </div>
+                  <div className='w-3/12'>
+                    <label className='text-xs lg:text-base' htmlFor='rooms'>
+                      Rooms
+                    </label>
+                    <input
+                      value={form.rooms}
+                      onChange={(e) =>
+                        setForm({ ...form, rooms: e.target.value })
+                      }
+                      id='rooms'
+                      className='w-5/6'
+                      type='text'
+                    />
+                  </div>
+                  <div className='w-3/12'>
+                    <label className='text-xs lg:text-base' htmlFor='footage'>
+                      Footage
+                    </label>
+                    <input
+                      value={form.footage}
+                      onChange={(e) =>
+                        setForm({ ...form, footage: e.target.value })
+                      }
+                      id='footage'
+                      className='w-5/6'
+                      type='text'
+                    />
+                  </div>
+                </div>
+                <div className='w-2/12 self-center lg:self-start'>
+                  <button className='text-xs lg:text-base px-2 py-2 lg:px-10 lg:py-6 bg-yellow text-white'>
+                    Search
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
         <section
-          className='lg:max-w-7xl lg:mt-[600px] lg:mx-[135px] mb-10  lg:mb-[128px]'
+          className='lg:max-w-7xl lg:mt-[100px] lg:mx-[135px] mb-10  lg:mb-[128px]'
           id='torent'
         >
           <div className='flex justify-between items-center mx-5 lg:mx-0 mb-12'>
@@ -287,7 +360,6 @@ function App() {
                   Subscribe to get a discount
                 </h6>
                 <h6 className='text-2xl lg:text-5xl text-white text-center mb-4'>
-                  {' '}
                   of 30%
                 </h6>
 
