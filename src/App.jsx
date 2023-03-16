@@ -123,9 +123,9 @@ function App() {
               <img src={House} alt='house' />
             </div>
             <div className='lg:absolute lg:bottom-0 w-full max-w-full lg:max-w-[1308px] xl:max-w-[1308px]  lg:right-[135px]  lg:w-[894px] bg-white h-[112px] py-4 px-1 lg:py-[16px] lg:px-[40px] shadow-2xl'>
-              <div className='flex items-center'>
-                <div className='w-10/12 flex items-center'>
-                  <div className='w-3/12'>
+              <div className='flex flex-wrap items-center'>
+                <div className='w-full lg:w-10/12 flex items-center'>
+                  <div className='w-3/12 self-center'>
                     <label className='text-xs lg:text-base' htmlFor='select'>
                       Select City
                     </label>
@@ -139,7 +139,7 @@ function App() {
                       type='text'
                     />
                   </div>
-                  <div className='w-3/12'>
+                  <div className='w-3/12 self-center'>
                     <label
                       className='flex items-center text-xs lg:text-base'
                       htmlFor='price'
@@ -159,9 +159,9 @@ function App() {
                       type='text'
                     />
                   </div>
-                  <div className='w-3/12'>
+                  <div className='w-3/12 self-center'>
                     <label
-                      className='flex items-start text-xs lg:text-base'
+                      className='flex items-center text-xs lg:text-base'
                       htmlFor='rooms'
                     >
                       Rooms
@@ -179,7 +179,7 @@ function App() {
                       type='text'
                     />
                   </div>
-                  <div className='w-3/12'>
+                  <div className='w-3/12 self-center'>
                     <label className='text-xs lg:text-base' htmlFor='footage'>
                       Footage
                     </label>
@@ -194,7 +194,7 @@ function App() {
                     />
                   </div>
                 </div>
-                <div className='w-2/12 self-center lg:self-start'>
+                <div className='w-full lg:w-2/12 text-center lg:text-left self-center lg:self-start'>
                   <button className='text-xs lg:text-base px-2 py-2 lg:px-10 lg:py-6 bg-yellow text-white'>
                     Search
                   </button>
